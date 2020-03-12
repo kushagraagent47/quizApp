@@ -507,7 +507,10 @@ timer(30);
 
   });	
 </script>
-
+<script>
+setInterval(function(){ 
+   $("#question").submit();
+},30000);</script>
 <?php } 
 else {
 	header("location: home.php");
