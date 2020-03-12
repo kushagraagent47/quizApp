@@ -31,7 +31,7 @@ if (isset($_SESSION['admin'])) {
 			<tr>
 			<th>Player Id</th>
 			<th>Email</th>
-			<th>Played On</th>
+			<th>Password/Roll</th>
 			<th>Score</th>
 			</tr>
 		</thead>
@@ -44,12 +44,12 @@ if (isset($_SESSION['admin'])) {
             while ($row = mysqli_fetch_array($select_players)) {
                 $id = $row['id'];
                 $email = $row['email'];
-                $played_on = $row['played_on'];
+                $password = $row['password'];
                 $score = $row['score'];
                 echo "<tr>";
                 echo "<td>$id</td>";
                 echo "<td>$email</td>";
-                echo "<td>$played_on</td>";
+                echo "<td>$password</td>";
                 echo "<td>$score</td>";
               
                 echo "</tr>";
