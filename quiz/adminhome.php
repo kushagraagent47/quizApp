@@ -21,6 +21,7 @@ if (isset($_SESSION['admin'])) {
 				<a href="add.php" class="start">Add Question</a>
 				<a href="allquestions.php" class="start">All Questions</a>
 				<a href="players.php" class="start">Players</a>
+				<a href="get_excel.php" class="start">Get excel</a>
 				<a href="add_users.php" class="start">Add users</a>
 				<a href="exit.php" class="start">Logout</a>
 
