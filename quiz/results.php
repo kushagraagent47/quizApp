@@ -20,7 +20,7 @@ echo $_SESSION['score'];
 }; ?></font></h3>
   <hr class="my-4">
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Log out</a>
+    <a class="btn btn-primary btn-lg" href="logout.php" role="button">Log out</a>
   </p>
 </div>
     </div>
