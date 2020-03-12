@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
 	        else {
 	        	header('location: question.php?n='.$_SESSION['quiz']);
 	        } 
-	        if (isset($_SESSION['quiz']) && $_SESSION['quiz'] == $qno) {
+	        // if (isset($_SESSION['quiz']) && $_SESSION['quiz'] == $qno) {
 			$query = "SELECT * FROM questions WHERE qno = '$qno'" ;
 			$run = mysqli_query($conn , $query) or die(mysqli_error($conn));
 			if (mysqli_num_rows($run) > 0) {
@@ -39,11 +39,11 @@ if (isset($_SESSION['id'])) {
 				echo "<script> alert('something went wrong');
 			window.location.href = 'home.php'; </script> " ;
 			}
-		}
-		else {
-		echo "<script> alert('error');
-			window.location.href = 'home.php'; </script> " ;
-	}
+	// 	}
+	// 	else {
+	// 	echo "<script> alert('error');
+	// 		window.location.href = 'home.php'; </script> " ;
+	// }
 ?>
 <?php 
 $total = "SELECT * FROM questions ";
