@@ -7,7 +7,7 @@ if (isset($_SESSION['admin'])) {
 if (isset($_POST['password']))  {
 	$password = mysqli_real_escape_string($conn , $_POST['password']);
 	$adminpass = '$2y$10$8WkSLFcoaqhJUJoqjg3K8eWixJWswsICf7FTxehKmx8hpmIKYWqju';
-	if (password_verify($password , $adminpass)) {
+	if ($password == $adminpass) {
 		$_SESSION['admin'] = "active";
 		header("Location: adminhome.php");
 	}
