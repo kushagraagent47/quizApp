@@ -23,6 +23,7 @@ if (isset($_SESSION['id'])) {
                  $ans2 = $row['ans2'];
                  $ans3 = $row['ans3'];
                  $ans4 = $row['ans4'];
+                 $image = $row['image'];
                  $correct_answer = $row['correct_answer'];
                  $_SESSION['quiz'] = $qno;
                  $checkqsn = "SELECT * FROM questions" ;
@@ -431,6 +432,18 @@ label .glyphicon {
          <div class="modal-header">
             <h3><span  id="qid"><b>Q<?php echo $qno; ?></b><font size="5"> <?php echo $question; ?></span></font></div> Time left <span id="some_div"></span>	seconds		</h3>
         </div>
+        <br>
+        <br>
+        <?php if($image !== NULL) {
+                ?>
+&nbsp;&nbsp;<img src="uploads/<?php echo $image ?>" alt="Italian Trulli" width="300" height="220">
+
+                <?php
+            }
+            ?>
+        <br>
+        <br>
+
         <div class="modal-body">
             <div class="col-xs-3 col-xs-offset-5">
                <div id="loadbar" style="display: none;">
@@ -444,7 +457,6 @@ label .glyphicon {
                   <div class="blockG" id="rotateG_08"></div>
               </div>
           </div>
-
           <div class="quiz" id="quiz" data-toggle="buttons">
            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="" value="a"><?php echo $ans1; ?></label>
            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="" value="b"><?php echo $ans2; ?></label>

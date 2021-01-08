@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root", "IsteIsBetter", "php-kuiz");
+$conn = mysqli_connect("localhost","iste", "IsteIsBetter", "php-kuiz");
 // error_reporting(0);
 // ini_set('display_errors', 0);
 ?>
